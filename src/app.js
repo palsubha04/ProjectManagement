@@ -23,9 +23,11 @@ app.use(
 
 // import the routes
 import healthcheckRoutes from "./routes/healthcheck.routes.js";
+import authRouter from "./routes/auth.routes.js";
 
 // use the routes
 app.use("/api/v1/healthcheck", healthcheckRoutes);
+app.use("/api/v1/auth", authRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World! Welcome to the Base Campy API.");
