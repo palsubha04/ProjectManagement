@@ -24,7 +24,7 @@ export const validate = (req, res, next) => {
   const errors = validationResult(req);
 
   // If no errors found, proceed to the next middleware
-  if (!errors.isEmpty()) {
+  if (errors.isEmpty()) {
     return next();
   }
 
